@@ -4,7 +4,7 @@ class moneyChanger {
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("교환할 돈을 입력하세요 : ");
+        System.out.print("돈을 입력하세요 : ");
         int money = scan.nextInt();
         int moneys = 0;
 
