@@ -5,7 +5,7 @@ class UpDown{
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
         Random ran = new Random();
-        int ranNum = ran.nextInt(100);
+        int ranNum = ran.nextInt(100) + 1;
 
         while (true) {
             System.out.print("수 입력 : ");
