@@ -13,7 +13,7 @@ class HangMan {
         int i = 0;
         String inputWords[] = new String[100];
 
-        //System.out.println(word);       //디버깅용
+        //System.out.println(word);       디버깅용
 
         while (true) {
             System.out.print("글자 / 단어 입력 : ");
