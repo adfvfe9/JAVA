@@ -11,7 +11,7 @@ class RockScissorsPaper {
             int playerChoose = 0;
             int comChoose = ran.nextInt(3);
 
-            System.out.println("입력값 디버깅: [" + input + "]"); // 입력값 디버깅
+            //System.out.println("입력값 디버깅: [" + input + "]"); // 입력값 디버깅
 
             switch (input) {
                 case "바위" : playerChoose = 0; break;
