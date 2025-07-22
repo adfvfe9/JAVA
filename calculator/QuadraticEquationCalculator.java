@@ -1,7 +1,7 @@
 import java.util.*;
 import java.text.DecimalFormat;
 
-public class QuadraticEquationCaculator {
+public class QuadraticEquationCalculator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         DecimalFormat dot3 = new DecimalFormat("#.###");        // 소수점 3자리까지 반올림해주는 포맷. 5.000같은놈은 5로 출력함
