@@ -14,6 +14,7 @@ public class StatisticsCalculator {
         } while (true);
         if (arr.isEmpty()) {
             System.out.println("입력값이 없습니다.");
+            scan.close();
             return;
         }
         int nums[] = new int[arr.size()];
@@ -27,6 +28,7 @@ public class StatisticsCalculator {
         System.out.println("중앙값 : " + dot3.format(getMiddleValue(nums)));
         System.out.println("분산 : " + dot3.format(getBunsan(nums, ave)));      // 표본분산이여서 입력값 2개 이상일때만 유의미
         System.out.println("표준편차 : " + dot3.format(Math.sqrt(getBunsan(nums, ave))));
+        scan.close();
     }
     static void feedLine() {
         for (int i = 1; i <= 50; i++) {
@@ -35,7 +37,6 @@ public class StatisticsCalculator {
         System.out.println();
     }
     static double getAve (int a[]) {
-        if (a.length == 0) return 0;
         double sum = 0;
         for (int i : a) {
             sum += i;
@@ -43,7 +44,6 @@ public class StatisticsCalculator {
         return sum / a.length;
     }
     static double getMiddleValue(int a[]) {
-        if (a.length == 0) return 0;
         if (a.length % 2 == 1) {
             return a[a.length / 2];
         } else {
@@ -51,7 +51,7 @@ public class StatisticsCalculator {
         }
     }
     static double getBunsan (int a[], double b) {
-        if (a.length == 0 || a.length == 1) return 0;
+        if (a.length == 1) return 0;
         double sum = 0;
         for (int i : a) {
             sum += Math.pow(b - i, 2);
