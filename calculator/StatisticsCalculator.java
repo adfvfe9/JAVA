@@ -9,9 +9,13 @@ public class StatisticsCalculator {
         do {
             System.out.print("수 입력 (종료하려면 -1 입력) : ");
             int a = scan.nextInt();
-            if (a == -1) break; 
+            if (a == -1) break;
             arr.add(a);
         } while (true);
+        if (arr.isEmpty()) {
+            System.out.println("입력값이 없습니다.");
+            return;
+        }
         int nums[] = new int[arr.size()];
         for (int i = 0; i < arr.size(); i++) {
             nums[i] = arr.get(i);
@@ -19,7 +23,7 @@ public class StatisticsCalculator {
         Arrays.sort(nums);
         double ave = getAve(nums);
         feedLine();
-        System.out.println("산술평균 : " + dot3.format(getAve(nums)));
+        System.out.println("산술평균 : " + dot3.format(ave));
         System.out.println("중앙값 : " + dot3.format(getMiddleValue(nums)));
         System.out.println("분산 : " + dot3.format(getBunsan(nums, ave)));      // 표본분산이여서 입력값 2개 이상일때만 유의미
         System.out.println("표준편차 : " + dot3.format(Math.sqrt(getBunsan(nums, ave))));
